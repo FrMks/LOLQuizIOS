@@ -11,6 +11,7 @@
 		17278073286080A0004FA7F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17278072286080A0004FA7F4 /* ContentView.swift */; };
 		17278075286080A2004FA7F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17278074286080A2004FA7F4 /* Assets.xcassets */; };
 		17278078286080A2004FA7F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17278077286080A2004FA7F4 /* Preview Assets.xcassets */; };
+		1727807F286099EF004FA7F4 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727807E286099EF004FA7F4 /* CreateAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		17278072286080A0004FA7F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17278074286080A2004FA7F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17278077286080A2004FA7F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1727807E286099EF004FA7F4 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				17278070286080A0004FA7F4 /* LOLQuizApp.swift */,
 				17278072286080A0004FA7F4 /* ContentView.swift */,
+				1727807E286099EF004FA7F4 /* CreateAccount.swift */,
 				17278074286080A2004FA7F4 /* Assets.xcassets */,
 				17278076286080A2004FA7F4 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17278073286080A0004FA7F4 /* ContentView.swift in Sources */,
+				1727807F286099EF004FA7F4 /* CreateAccount.swift in Sources */,
 				17278071286080A0004FA7F4 /* LOLQuizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
