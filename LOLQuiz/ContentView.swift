@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var model = Model()
     var body: some View {
-        Text("Hello, master!")
-            .padding()
+        if !model.loginAccount {
+            CreateAccount()
+        } else if model.main {
+            Main()
+        } else if model.loginAccount {
+            LoginAccount()
+        }
     }
 }
 

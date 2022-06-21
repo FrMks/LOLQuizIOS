@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		17278071286080A0004FA7F4 /* LOLQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17278070286080A0004FA7F4 /* LOLQuizApp.swift */; };
 		17278073286080A0004FA7F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17278072286080A0004FA7F4 /* ContentView.swift */; };
-		17278075286080A2004FA7F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17278074286080A2004FA7F4 /* Assets.xcassets */; };
-		17278078286080A2004FA7F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17278077286080A2004FA7F4 /* Preview Assets.xcassets */; };
 		1727807F286099EF004FA7F4 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727807E286099EF004FA7F4 /* CreateAccount.swift */; };
+		172780852861CE15004FA7F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172780842861CE15004FA7F4 /* Assets.xcassets */; };
+		172780872861D007004FA7F4 /* VarCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172780862861D007004FA7F4 /* VarCreateAccount.swift */; };
+		1727808A2861E7CE004FA7F4 /* LoginAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172780892861E7CE004FA7F4 /* LoginAccount.swift */; };
+		1727808C2861E981004FA7F4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808B2861E981004FA7F4 /* Model.swift */; };
+		1727808E2861EA3E004FA7F4 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808D2861EA3E004FA7F4 /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1727806D286080A0004FA7F4 /* LOLQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17278070286080A0004FA7F4 /* LOLQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLQuizApp.swift; sourceTree = "<group>"; };
 		17278072286080A0004FA7F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		17278074286080A2004FA7F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		17278077286080A2004FA7F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1727807E286099EF004FA7F4 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		172780842861CE15004FA7F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LOLQuiz/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		172780862861D007004FA7F4 /* VarCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarCreateAccount.swift; sourceTree = "<group>"; };
+		172780892861E7CE004FA7F4 /* LoginAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccount.swift; sourceTree = "<group>"; };
+		1727808B2861E981004FA7F4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1727808D2861EA3E004FA7F4 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,12 @@
 			children = (
 				17278070286080A0004FA7F4 /* LOLQuizApp.swift */,
 				17278072286080A0004FA7F4 /* ContentView.swift */,
+				1727808D2861EA3E004FA7F4 /* Main.swift */,
 				1727807E286099EF004FA7F4 /* CreateAccount.swift */,
-				17278074286080A2004FA7F4 /* Assets.xcassets */,
+				172780892861E7CE004FA7F4 /* LoginAccount.swift */,
+				172780862861D007004FA7F4 /* VarCreateAccount.swift */,
+				1727808B2861E981004FA7F4 /* Model.swift */,
+				172780842861CE15004FA7F4 /* Assets.xcassets */,
 				17278076286080A2004FA7F4 /* Preview Content */,
 			);
 			path = LOLQuiz;
@@ -65,7 +75,6 @@
 		17278076286080A2004FA7F4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				17278077286080A2004FA7F4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -128,8 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17278078286080A2004FA7F4 /* Preview Assets.xcassets in Resources */,
-				17278075286080A2004FA7F4 /* Assets.xcassets in Resources */,
+				172780852861CE15004FA7F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +151,10 @@
 				17278073286080A0004FA7F4 /* ContentView.swift in Sources */,
 				1727807F286099EF004FA7F4 /* CreateAccount.swift in Sources */,
 				17278071286080A0004FA7F4 /* LOLQuizApp.swift in Sources */,
+				1727808C2861E981004FA7F4 /* Model.swift in Sources */,
+				1727808A2861E7CE004FA7F4 /* LoginAccount.swift in Sources */,
+				1727808E2861EA3E004FA7F4 /* Main.swift in Sources */,
+				172780872861D007004FA7F4 /* VarCreateAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +280,6 @@
 		1727807C286080A2004FA7F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -297,7 +308,6 @@
 		1727807D286080A2004FA7F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
