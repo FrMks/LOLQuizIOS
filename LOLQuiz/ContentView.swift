@@ -10,13 +10,22 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var model = Model()
     var body: some View {
-        if !model.loginAccount {
-            CreateAccount()
-        } else if model.main {
-            Main()
-        } else if model.loginAccount {
+        switch model.screen {
+        case .createScreen:
+            CreateAccount(model: self.model)
+        case .loginScreen:
             LoginAccount()
+        case .mainScreen:
+            Main()
         }
+        
+//        if !model.loginAccount {
+//            CreateAccount()
+//        } else if model.main {
+//            Main()
+//        } else if model.loginAccount {
+//            LoginAccount()
+//        }
     }
 }
 

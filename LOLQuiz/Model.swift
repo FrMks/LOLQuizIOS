@@ -8,6 +8,12 @@
 import Foundation
 
 class Model: ObservableObject {
-    @Published var loginAccount = false
-    @Published var main = false
+    enum Screen {
+        case loginScreen
+        case createScreen
+        case mainScreen
+    }
+    @Published var screen = Screen.createScreen
+    //@Published var loginAccount = false
+    //@Published var main = false
 }

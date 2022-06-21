@@ -10,7 +10,7 @@ import SwiftUI
 struct CreateAccount: View {
     @State var emailIsEmpty = true
     @ObservedObject var varCreateAccount = VarCreateAccount()
-    @ObservedObject var model = Model()
+    var model: Model
     var body: some View {
         ZStack {
             Image("CreateAccount")
@@ -26,16 +26,17 @@ struct CreateAccount: View {
                         .font(.system(size: 32))
                         .bold()
                     
+                    
                     ZStack {
                         Circle()
                             .opacity(0.7)
                             .foregroundColor(Color(red: 75/255, green: 123/255, blue: 229/255))
                             .frame(width: 150, height: 150)
-                        
+
                         Image("AccountIcon")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 150, height: 150)//подумать убрать или нет
                     }
                     
                     HStack {
@@ -53,12 +54,6 @@ struct CreateAccount: View {
                         }
                             
                         ZStack {
-                            if varCreateAccount.email.isEmpty {
-                                Text("Email")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .frame(width: 250, height: 50, alignment: .leading)
-                            }
                             
                             TextField("", text: $varCreateAccount.email)
                                     .padding()
@@ -66,6 +61,9 @@ struct CreateAccount: View {
                                     .foregroundColor(.white)
                                     .background(Color(red: 75/255, green: 123/255, blue: 229/255).opacity(0.7))
                                     .cornerRadius(10)
+                                    .placeholder(when: varCreateAccount.email.isEmpty) {
+                                        Text("Email").foregroundColor(.white).padding()
+                                    }
                         }.padding()
                     }
                     
@@ -85,19 +83,15 @@ struct CreateAccount: View {
                         }
                             
                         ZStack {
-                            if varCreateAccount.email.isEmpty {
-                                Text("Password")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .frame(width: 250, height: 50, alignment: .leading)
-                            }
-                            
                             TextField("", text: $varCreateAccount.password)
                                     .padding()
                                     .frame(width: 250, height: 50)
                                     .foregroundColor(.white)
                                     .background(Color(red: 75/255, green: 123/255, blue: 229/255).opacity(0.7))
                                     .cornerRadius(10)
+                                    .placeholder(when: varCreateAccount.email.isEmpty) {
+                                        Text("Email").foregroundColor(.white).padding()
+                                    }
                         }.padding()
                     }
                     
@@ -116,24 +110,21 @@ struct CreateAccount: View {
                         }
                             
                         ZStack {
-                            if varCreateAccount.email.isEmpty {
-                                Text("Confirm password")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .frame(width: 250, height: 50, alignment: .leading)
-                            }
-                            
                             TextField("", text: $varCreateAccount.againPassword)
                                     .padding()
                                     .frame(width: 250, height: 50)
                                     .foregroundColor(.white)
                                     .background(Color(red: 75/255, green: 123/255, blue: 229/255).opacity(0.7))
                                     .cornerRadius(10)
+                                    .placeholder(when: varCreateAccount.email.isEmpty) {
+                                        Text("Email").foregroundColor(.white).padding()
+                                    }
                         }.padding()
                     }
                     Button(action: {
                         if !varCreateAccount.email.isEmpty && !varCreateAccount.password.isEmpty && varCreateAccount.againPassword == varCreateAccount.password {
-                            model.main = true
+                            print("main = true")
+                            model.screen = .mainScreen
                         }
                     }) {
                         Text("CREATE ACCOUNT")
@@ -144,12 +135,14 @@ struct CreateAccount: View {
                             .frame(width: 330)
                             .background(Color(red: 85/255, green: 52/255, blue: 165/255))
                             .cornerRadius(10)
+                        
                     }
                 }.padding()
                 HStack {
                     Text("Already have a account?").foregroundColor(.white)
                     Text("Login").foregroundColor(Color(red: 111/255, green: 223/255, blue: 223/255)).onTapGesture {
-                        model.loginAccount = true
+                        print("login = true")
+                        model.screen = .loginScreen
                     }
                 }
             }
@@ -158,8 +151,21 @@ struct CreateAccount: View {
 }
 
 
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
+    }
+}
+
 struct CreateAccount_Previews: PreviewProvider {
     static var previews: some View {
-        CreateAccount()
+        CreateAccount(model: Model())
     }
 }
