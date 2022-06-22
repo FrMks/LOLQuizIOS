@@ -133,7 +133,6 @@ struct CreateAccount: View {
                             .frame(width: 330)
                             .background(Color(red: 85/255, green: 52/255, blue: 165/255))
                             .cornerRadius(10)
-                        
                     }
                 }.padding()
                 HStack {

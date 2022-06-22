@@ -84,6 +84,23 @@ struct LoginAccount: View {
                         }
                         .padding()
                 }
+                
+                Button(action: {
+                    if !varCreateAccount.email.isEmpty && !varCreateAccount.password.isEmpty {
+                        print("main = true")
+                        model.screen = .mainScreen
+                    }
+                }) {
+                    Text("Login")
+                        .bold()
+                        .font(.system(size: 23))
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 330)
+                        .background(Color(red: 85/255, green: 52/255, blue: 165/255))
+                        .cornerRadius(10)
+                }
+                
                 HStack {
                     Text("Don't have an account?").foregroundColor(.white)
                     Text("Sign up").foregroundColor(Color(red: 111/255, green: 223/255, blue: 223/255)).onTapGesture {
