@@ -11,4 +11,5 @@ class VarCreateAccount: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var againPassword = ""
+    @Published var isEmailValid = true
 }

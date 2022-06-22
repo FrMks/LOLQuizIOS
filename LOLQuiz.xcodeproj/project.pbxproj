@@ -15,6 +15,7 @@
 		1727808A2861E7CE004FA7F4 /* LoginAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172780892861E7CE004FA7F4 /* LoginAccount.swift */; };
 		1727808C2861E981004FA7F4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808B2861E981004FA7F4 /* Model.swift */; };
 		1727808E2861EA3E004FA7F4 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808D2861EA3E004FA7F4 /* Main.swift */; };
+		1727809028631A6C004FA7F4 /* IconAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808F28631A6C004FA7F4 /* IconAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		172780892861E7CE004FA7F4 /* LoginAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccount.swift; sourceTree = "<group>"; };
 		1727808B2861E981004FA7F4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1727808D2861EA3E004FA7F4 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		1727808F28631A6C004FA7F4 /* IconAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				17278072286080A0004FA7F4 /* ContentView.swift */,
 				1727808D2861EA3E004FA7F4 /* Main.swift */,
 				1727807E286099EF004FA7F4 /* CreateAccount.swift */,
+				1727808F28631A6C004FA7F4 /* IconAccount.swift */,
 				172780892861E7CE004FA7F4 /* LoginAccount.swift */,
 				172780862861D007004FA7F4 /* VarCreateAccount.swift */,
 				1727808B2861E981004FA7F4 /* Model.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				17278073286080A0004FA7F4 /* ContentView.swift in Sources */,
 				1727807F286099EF004FA7F4 /* CreateAccount.swift in Sources */,
+				1727809028631A6C004FA7F4 /* IconAccount.swift in Sources */,
 				17278071286080A0004FA7F4 /* LOLQuizApp.swift in Sources */,
 				1727808C2861E981004FA7F4 /* Model.swift in Sources */,
 				1727808A2861E7CE004FA7F4 /* LoginAccount.swift in Sources */,

@@ -14,7 +14,7 @@ struct ContentView: View {
         case .createScreen:
             CreateAccount(model: self.model)
         case .loginScreen:
-            LoginAccount()
+            LoginAccount(model: self.model)
         case .mainScreen:
             Main()
         }
