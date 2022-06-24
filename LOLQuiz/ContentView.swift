@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var model = Model()
+    @ObservedObject var gameViewModel = GameViewModel()
     var body: some View {
         switch model.screen {
         case .createScreen:
@@ -16,7 +17,9 @@ struct ContentView: View {
         case .loginScreen:
             LoginAccount(model: self.model)
         case .mainScreen:
-            Main()
+            Main(model: self.model, gameViewModel: self.gameViewModel)
+        case .firstGameScreen:
+            FirstGame(model: self.model, gameViewModel: self.gameViewModel)
         }
         
 //        if !model.loginAccount {

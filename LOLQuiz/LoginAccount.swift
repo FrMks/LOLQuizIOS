@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginAccount: View {
-    @ObservedObject var varCreateAccount = VarCreateAccount()
+    @ObservedObject var varLoginAccount = VarCreateAccount()
     var model: Model
     var body: some View {
         ZStack {
@@ -39,13 +39,13 @@ struct LoginAccount: View {
                             .scaledToFit()
                             .frame(width: 50, height: 50)
                     }
-                    TextField("", text: $varCreateAccount.email, onEditingChanged: { (isChanged) in
+                    TextField("", text: $varLoginAccount.email, onEditingChanged: { (isChanged) in
                         if !isChanged {
-                            if self.textFieldValidatorEmail(varCreateAccount.email) {
-                                varCreateAccount.isEmailValid = true
+                            if self.textFieldValidatorEmail(varLoginAccount.email) {
+                                varLoginAccount.isEmailValid = true
                                         } else {
-                                            varCreateAccount.isEmailValid = false
-                                            varCreateAccount.email = ""
+                                            varLoginAccount.isEmailValid = false
+                                            varLoginAccount.email = ""
                                         }
                                     }
                     })
@@ -54,7 +54,7 @@ struct LoginAccount: View {
                         .foregroundColor(.white)
                         .background(Color(red: 75/255, green: 123/255, blue: 229/255).opacity(0.7))
                         .cornerRadius(10)
-                        .placeholder(when: varCreateAccount.email.isEmpty) {
+                        .placeholder(when: varLoginAccount.email.isEmpty) {
                             Text("Email").foregroundColor(.white).padding()
                         }
                         .padding()
@@ -73,20 +73,20 @@ struct LoginAccount: View {
                             .scaledToFit()
                             .frame(width: 50, height: 50)
                     }
-                    TextField("", text: $varCreateAccount.password)
+                    TextField("", text: $varLoginAccount.password)
                         .padding()
                         .frame(width: 250, height: 50)
                         .foregroundColor(.white)
                         .background(Color(red: 75/255, green: 123/255, blue: 229/255).opacity(0.7))
                         .cornerRadius(10)
-                        .placeholder(when: varCreateAccount.email.isEmpty) {
+                        .placeholder(when: varLoginAccount.email.isEmpty) {
                             Text("Password").foregroundColor(.white).padding()
                         }
                         .padding()
                 }
                 
                 Button(action: {
-                    if !varCreateAccount.email.isEmpty && !varCreateAccount.password.isEmpty {
+                    if !varLoginAccount.email.isEmpty && !varLoginAccount.password.isEmpty {
                         print("main = true")
                         model.screen = .mainScreen
                     }

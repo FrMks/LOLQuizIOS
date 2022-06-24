@@ -16,6 +16,9 @@
 		1727808C2861E981004FA7F4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808B2861E981004FA7F4 /* Model.swift */; };
 		1727808E2861EA3E004FA7F4 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808D2861EA3E004FA7F4 /* Main.swift */; };
 		1727809028631A6C004FA7F4 /* IconAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727808F28631A6C004FA7F4 /* IconAccount.swift */; };
+		1727809228632922004FA7F4 /* FirstGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727809128632922004FA7F4 /* FirstGame.swift */; };
+		172780962864A51F004FA7F4 /* LOLQuizJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 172780952864A51F004FA7F4 /* LOLQuizJSON.json */; };
+		1727809A2865E08A004FA7F4 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172780992865E08A004FA7F4 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		1727808B2861E981004FA7F4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1727808D2861EA3E004FA7F4 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		1727808F28631A6C004FA7F4 /* IconAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconAccount.swift; sourceTree = "<group>"; };
+		1727809128632922004FA7F4 /* FirstGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGame.swift; sourceTree = "<group>"; };
+		172780952864A51F004FA7F4 /* LOLQuizJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LOLQuizJSON.json; sourceTree = "<group>"; };
+		172780992865E08A004FA7F4 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +69,16 @@
 			children = (
 				17278070286080A0004FA7F4 /* LOLQuizApp.swift */,
 				17278072286080A0004FA7F4 /* ContentView.swift */,
+				1727809128632922004FA7F4 /* FirstGame.swift */,
 				1727808D2861EA3E004FA7F4 /* Main.swift */,
 				1727807E286099EF004FA7F4 /* CreateAccount.swift */,
+				172780992865E08A004FA7F4 /* GameViewModel.swift */,
 				1727808F28631A6C004FA7F4 /* IconAccount.swift */,
 				172780892861E7CE004FA7F4 /* LoginAccount.swift */,
 				172780862861D007004FA7F4 /* VarCreateAccount.swift */,
 				1727808B2861E981004FA7F4 /* Model.swift */,
 				172780842861CE15004FA7F4 /* Assets.xcassets */,
+				172780952864A51F004FA7F4 /* LOLQuizJSON.json */,
 				17278076286080A2004FA7F4 /* Preview Content */,
 			);
 			path = LOLQuiz;
@@ -140,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172780962864A51F004FA7F4 /* LOLQuizJSON.json in Resources */,
 				172780852861CE15004FA7F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,8 +166,10 @@
 				1727809028631A6C004FA7F4 /* IconAccount.swift in Sources */,
 				17278071286080A0004FA7F4 /* LOLQuizApp.swift in Sources */,
 				1727808C2861E981004FA7F4 /* Model.swift in Sources */,
+				1727809228632922004FA7F4 /* FirstGame.swift in Sources */,
 				1727808A2861E7CE004FA7F4 /* LoginAccount.swift in Sources */,
 				1727808E2861EA3E004FA7F4 /* Main.swift in Sources */,
+				1727809A2865E08A004FA7F4 /* GameViewModel.swift in Sources */,
 				172780872861D007004FA7F4 /* VarCreateAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
