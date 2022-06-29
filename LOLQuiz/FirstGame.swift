@@ -13,13 +13,46 @@ struct FirstGame: View {
     var body: some View {
         VStack {
             Button(action: {
-                gameViewModel.generateRandomItems()
+                //gameViewModel.generateRandomItems()
+                gameViewModel.testGenerateRandomNainItem()
+                gameViewModel.testGenerateRandomItems()
             }) {
                 Text("Generate")
             }
-            List(gameViewModel.randomItems) {
-                Text($0.name)
+            
+            ForEach(gameViewModel.mainRandomItem) { item in
+                AsyncImage(url: URL(string: item.imageUrl))
+                    .frame(width: 70, height: 70)
+                    .padding()
+                    .background(Color(red: 75/255, green: 123/255, blue: 229/255))
+                    .cornerRadius(10)
             }
+            
+//            ZStack {
+//                Rectangle()
+//                    .frame(width: 90, height: 90)
+//                    .foregroundColor(Color(red: 75/255, green: 123/255, blue: 229/255))
+//                ForEach(gameViewModel.mainRandomItem) { item in
+//                    AsyncImage(url: URL(string: item.imageUrl))
+//                        .frame(width: 70, height: 70)
+//                }
+//            }
+            VStack {
+                ForEach(gameViewModel.randomItems) { item in
+                            AsyncImage(url: URL(string: item.imageUrl))
+                                .frame(width: 70, height: 70)
+                                .padding()
+                                .background(Color(red: 75/255, green: 123/255, blue: 229/255))
+                                .cornerRadius(10)
+                                .lineLimit(2)
+                }
+            }
+            
+            
+            
+//            List(gameViewModel.randomItems) {
+//                AsyncImage(url: URL(string: $0.imageUrl))
+//            }
             
 //            if randomItem1.id == randomItem2.id {
 //                randomItem2 = gameViewModel.result.randomElement()!

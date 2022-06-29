@@ -15,7 +15,7 @@ struct Main: View {
             print("Buttom play")
             model.screen = .firstGameScreen
             gameViewModel.parseJSON()
-            //gameViewModel.generateRandomItems()
+            
         }) {
             Text("Play")
                 .bold()
