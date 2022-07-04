@@ -20,23 +20,23 @@ struct FirstGame: View {
                 Text("Generate")
             }
             
-            ForEach(gameViewModel.mainRandomItem) { item in
-                AsyncImage(url: URL(string: item.imageUrl))
-                    .frame(width: 70, height: 70)
-                    .padding()
-                    .background(Color(red: 75/255, green: 123/255, blue: 229/255))
-                    .cornerRadius(10)
-            }
-            
-//            ZStack {
-//                Rectangle()
-//                    .frame(width: 90, height: 90)
-//                    .foregroundColor(Color(red: 75/255, green: 123/255, blue: 229/255))
-//                ForEach(gameViewModel.mainRandomItem) { item in
-//                    AsyncImage(url: URL(string: item.imageUrl))
-//                        .frame(width: 70, height: 70)
-//                }
+//            ForEach(gameViewModel.mainRandomItem) { item in
+//                AsyncImage(url: URL(string: item.imageUrl))
+//                    .frame(width: 70, height: 70)
+//                    .padding()
+//                    .background(Color(red: 75/255, green: 123/255, blue: 229/255))
+//                    .cornerRadius(10)
 //            }
+            
+            ZStack {
+                Rectangle()
+                    .frame(width: 90, height: 90)
+                    .foregroundColor(.red)
+                ForEach(gameViewModel.mainRandomItem) { item in
+                    AsyncImage(url: URL(string: item.imageUrl))
+                        .frame(width: 70, height: 70)
+                }
+            }
             VStack {
                 ForEach(gameViewModel.randomItems) { item in
                             AsyncImage(url: URL(string: item.imageUrl))
